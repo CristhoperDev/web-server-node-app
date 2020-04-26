@@ -1,7 +1,9 @@
 const express = require('express')
 const app = express()
 
-app.get('/', (req, res) => {
+app.use(express.static( __dirname + '/public' ));
+
+/*app.get('/', (req, res) => {
     //res.send('Hello World');
 
     let out = {
@@ -11,7 +13,7 @@ app.get('/', (req, res) => {
     };
 
     res.send(out);
-});
+});*/
 
 app.listen(3000, () => {
     console.log(`Listen Port: 3000`);
